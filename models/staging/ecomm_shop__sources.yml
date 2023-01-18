@@ -6,3 +6,6 @@ sources:
     tables:
       - name: order_items
       - name: products
+      - name: customers
+      - name: geolocation
+      - name: sellers
