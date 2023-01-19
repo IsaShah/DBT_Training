@@ -6,9 +6,9 @@ select
 
     count(order_id) as times_ordered
 
-from {{ ref('stg_order_items') }} oi
+from {{ ref('stg_ecomm_shop__order_items') }} oi
 
-join {{ ref('stg_products') }} p
+join {{ ref('stg_ecomm_shop__products') }} p
 
 on p.product_id = oi.product_id
 
