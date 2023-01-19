@@ -24,6 +24,11 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+# old school
+on-run-end:
+  - 'grant usage on schema ecomm_analytics.dbt_ishah to role analyst' #replace to your schema 
+  - 'grant select on all tables in schema ecomm_analytics.dbt_ishah to role analyst' #replace to your schema
+  - 'grant select on all views in schema ecomm_analytics.dbt_ishah to role analyst' #replace to your schema
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
