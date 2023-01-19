@@ -1,0 +1,43 @@
+version: 2
+models:
+  - name: stg_ecomm_shop__order_items
+    config:
+      materialized: table
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_orders')
+              field: order_id    
+
+
+  - name: stg_ecomm_shop__orders
+    config:
+      materialized: table
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - dbt_utils.not_null_proportion:
+              at_least: 0.95
+
+
+  - name: stg_ecomm_shop__product
+    config: 
+      materialized: table
+
+      
+  - name: stg_ecomm_shop__customers
+    congfig:
+      materialized: table
+
+
+  - name: stg_ecomm_shop__geolocation
+    congfig:
+      materialized: table
+
+      
+  - name: stg_ecomm_shop__sellers
+    congfig:
+      materialized: table

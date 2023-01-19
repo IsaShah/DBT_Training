@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: ecommshop
+    database: raw
+    schema: ECOMMSHOP 
+    tables:
+      - name: order_items
+      - name: products
+      - name: customers
+      - name: geolocation
+      - name: sellers
+      - name: orders

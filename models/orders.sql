@@ -1,0 +1,3 @@
+select ORDER_ID, CUSTOMER_ID 
+from RAW.ECOMMSHOP.ORDERS
+limit 10

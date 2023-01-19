@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: paymentsystem
+    schema: paymentsystem
+    database: raw
+    tables:
+      - name: payments

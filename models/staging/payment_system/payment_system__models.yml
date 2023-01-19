@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: stg_payment_system__payments
+    config:
+      materialized: table
+    columns:
+      - name: payment_type
+        tests:
+          - accepted_values:
+              values: ['credit_card', 'boleto', 'voucher', 'debit_card', 'not_defined']
