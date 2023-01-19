@@ -4,7 +4,7 @@ select
     ,count(o.order_id) num_orders
     ,sum(p.payment_value) sum_payment
 from {{ ref('stg_ecomm_shop__orders') }} o
-join {{ ref('stg_payment_system__payments.') }} p
+join {{ ref('stg_payment_system__payments') }} p
 on o.order_id = p.order_id
 group by customer_id
 order by num_orders desc
