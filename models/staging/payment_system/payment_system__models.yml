@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: stg_payments
+  - name: stg_payment_system__payments
     config:
       materialized: table
     columns:

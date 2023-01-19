@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: stg_order_items
+  - name: stg_ecomm_shop__order_items
     config:
       materialized: table
     columns:
@@ -12,7 +12,7 @@ models:
               field: order_id    
 
 
-  - name: stg_orders
+  - name: stg_ecomm_shop__orders
     config:
       materialized: table
     columns:
@@ -23,21 +23,21 @@ models:
               at_least: 0.95
 
 
-  - name: stg_product
+  - name: stg_ecomm_shop__product
     config: 
       materialized: table
 
       
-  - name: stg_customers
+  - name: stg_ecomm_shop__customers
     congfig:
       materialized: table
 
 
-  - name: stg_geolocation
+  - name: stg_ecomm_shop__geolocation
     congfig:
       materialized: table
 
       
-  - name: stg_sellers
+  - name: stg_ecomm_shop__sellers
     congfig:
       materialized: table
